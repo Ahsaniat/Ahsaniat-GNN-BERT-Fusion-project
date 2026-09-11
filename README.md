@@ -55,10 +55,10 @@ $$ \[T = (X_{\text{audio}}, X_{\text{text}}, G, y)\] $$
 
 where:
 
-- \(X_{\text{audio}}\) is the audio signal or derived acoustic representation,
-- \(X_{\text{text}}\) is a caption,
-- \(G=(V,E)\) is a graph constructed from audio segments,
-- \(y\) is the target context-label vector.
+- $X_{\text{audio}}$ is the audio signal or derived acoustic representation,
+- $X_{\text{text}}$ is a caption,
+- $G=(V,E)$ is a graph constructed from audio segments,
+- $y$ is the target context-label vector.
 
 The text representation is produced by DistilBERT, while the audio graph is processed with GraphSAGE. Their learned representations can then be used independently or fused for prediction.
 
