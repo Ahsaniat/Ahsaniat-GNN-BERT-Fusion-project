@@ -172,15 +172,7 @@ The fourth task trains GraphSAGE and DistilBERT representations in a shared embe
 
 For graph representation \(g_i\) and corresponding caption representation \(t_i\):
 
-$$
-\mathcal{L}_{NCE}
-=
--\log
-\frac
-{\exp(\text{sim}(g_i,t_i)/\tau)}
-{\sum_j \exp(\text{sim}(g_i,t_j)/\tau)}
-$$
-
+$$\mathcal{L}_{NCE} = -\log \frac{\exp(\text{sim}(g_i,t_i)/\tau)}{\sum_j \exp(\text{sim}(g_i,t_j)/\tau)}$$
 where cosine similarity is used.
 
 The trained representations are evaluated for:
