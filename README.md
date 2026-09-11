@@ -589,14 +589,7 @@ The MusicCaps classification task reports:
 
 ### Macro-F1
 
-$$
-\text{Macro-F1}
-=
-\frac{1}{K}
-\sum_{k=1}^{K}
-F1_k
-$$
-
+$$\text{Macro-F1} = \frac{1}{K} \sum_{k=1}^{K} F1_k$$
 This assigns equal importance to each tag.
 
 ### Micro-F1
