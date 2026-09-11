@@ -108,21 +108,7 @@ GraphSAGE performs message passing between connected audio segments.
 
 For layer \(l\):
 
-$$
-h_i^{(l+1)}
-=
-\sigma
-\left(
-W^{(l)}
-\cdot
-\text{CONCAT}
-\left[
-h_i^{(l)},
-\text{MEAN}_{j\in\mathcal{N}(i)}h_j^{(l)}
-\right]
-\right)
-$$
-
+$$h_i^{(l+1)} = \sigma\left(W^{(l)} \cdot \text{CONCAT}\left[h_i^{(l)}, \text{MEAN}_{j\in\mathcal{N}(i)}h_j^{(l)}\right]\right)$$
 After the final GraphSAGE layer, graph-level mean pooling produces an audio representation.
 
 The graph encoder is evaluated in two settings:
