@@ -51,9 +51,7 @@ This project studies whether graph-based audio representations and contextual la
 
 A music clip is represented conceptually as
 
-\[
-T = (X_{\text{audio}}, X_{\text{text}}, G, y)
-\]
+$$ \[T = (X_{\text{audio}}, X_{\text{text}}, G, y)\] $$
 
 where:
 
