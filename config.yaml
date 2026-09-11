@@ -1,0 +1,52 @@
+project:
+  name: gnn-bert-music-context-audited
+  seeds: [17, 42, 1337]
+  output_dir: results
+  checkpoint_dir: checkpoints
+
+audio:
+  sr: 22050
+  clip_seconds: 10.0
+  window_seconds: 2.0
+  hop_seconds: 1.0
+  n_mels: 64
+  n_mfcc: 20
+  n_chroma: 12
+
+graph:
+  similarity_top_k: 3
+  similarity_min: 0.60
+  add_temporal_edges: true
+
+text:
+  model_name: distilbert-base-uncased
+  max_length: 96
+  freeze_backbone: true
+  unfreeze_last_n_layers: 0
+
+model:
+  graph_hidden: 128
+  graph_layers: 3
+  text_proj: 128
+  fusion_dim: 128
+  dropout: 0.20
+  attention_heads: 4
+
+training:
+  epochs: 30
+  patience: 6
+  batch_size: 16
+  lr_heads: 0.001
+  lr_backbone: 0.00002
+  weight_decay: 0.0001
+  grad_clip: 1.0
+  use_pos_weight: true
+  threshold_min: 0.10
+  threshold_max: 0.90
+  threshold_step: 0.05
+
+datasets:
+  musiccaps_metadata: data/raw/musiccaps-public.csv
+  musiccaps_audio_dir: data/raw/musiccaps_audio
+  gtzan_audio_dir: data/raw/gtzan/genres
+  deam_annotations: data/raw/deam/static_annotations.csv
