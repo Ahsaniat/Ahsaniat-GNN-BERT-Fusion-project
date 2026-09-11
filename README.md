@@ -870,24 +870,6 @@ The final experiment used the **568 valid paired clips actually available in the
 
 ---
 
-# HuggingFace Model Cache
-
-The HuggingFace cache is stored persistently in Google Drive.
-
-Typical configuration:
-
-```text
-HF_HOME
-TRANSFORMERS_CACHE
-HF_DATASETS_CACHE
-```
-
-point to project cache directories under Google Drive.
-
-This prevents `distilbert-base-uncased` from being downloaded again after every Colab runtime reset.
-
----
-
 # Training Checkpoints
 
 Validation-best weights are saved throughout training.
@@ -1249,23 +1231,5 @@ MusicCaps metadata references externally hosted YouTube content. Raw MusicCaps a
 
 The project stores only audio obtained during preprocessing in the user's own persistent runtime environment and records source identifiers for reproducibility.
 
----
-
-## Project Status
-
-```text
-Task 1 — DistilBERT multi-label tagging       Completed
-Task 2 — GraphSAGE audio modeling             Completed
-Task 3 — GNN-BERT multimodal fusion           Completed
-Task 4 — Contrastive audio-text retrieval     Completed
-GTZAN GraphSAGE baseline                      Completed
-GTZAN mel-spectrogram CNN baseline            Completed
-Multi-seed evaluation                         Completed
-Threshold calibration                         Completed
-Held-out prediction export                    Completed
-Visualization pipeline                        Completed
-Persistent Drive checkpointing                Completed
-Final experimental evaluation                 Completed
-```
 
 
